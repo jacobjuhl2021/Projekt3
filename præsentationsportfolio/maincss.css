@@ -1,0 +1,283 @@
+body{
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    background-color:#85aa9b;
+}
+
+/*navigations bar*/
+nav{
+    display: flex;
+    flex-direction:row-reverse;
+    background-color: #18392b;
+    position: fixed;
+    width: 100%;
+    top: 0%;}
+nav a{
+    text-decoration: none;
+    color: #d0ded8;
+    text-align: center;
+    font-size: 27px;
+    padding: 0.1%;}
+
+nav a:hover {
+    background-color: #d0ded8;
+    color: #18392b;}
+.main{
+    margin-left: 1%;
+    margin-right: 3%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+.mig{
+    margin-left: 3%;
+    margin-right: 2%;
+    padding-top: 0.5%;
+}
+
+/*footer*/
+.footer{
+    display: flex;
+    flex-direction:row-reverse;
+    background-color: #18392b;
+    text-decoration: none;
+    color: #d0ded8;
+    text-align: center;
+    font-size: 20px;
+    padding: 0.1%;
+    position: fixed;
+    bottom: 0;
+    width: 100%;}
+.mail{
+    margin-left: 3%;
+    margin-right: 2%;
+}
+a{
+    color: #d0ded8;
+}
+
+/* startside billeder, tekst og arbejde */
+h1{ 
+    font-size: 150%;
+    text-align: center;   
+}
+h2{
+    background-color: #18392b;
+    color: #d0ded8;
+    font-size: 150%;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+.responsive{
+    height: auto;
+    width: 100%;   
+    }
+
+.responsive1{
+    height: auto;
+    width: 100%;
+    border-radius: 8%;
+}
+.responsive2{
+    height: auto;
+    width: 100%;
+}
+.responsive3{
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+/* gridcontainer 1*/
+.mobil{
+    display: grid;
+    grid-template-areas:
+    "a a a a a"
+    ". b b b ."
+    "d d d d d"
+    ". . c . .";}
+/* grid container 2*/
+.bodygrid{
+    display: grid;
+    grid-template-areas:
+    "a11"
+    "a1"
+    "b11"
+    "b1"
+    "c11"
+    "c1"
+    "d11"
+    "d1"
+    "e11"
+    "e1"
+    "f11"
+    "f1";
+    align-items: center;
+    text-align: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 10%;
+    
+    
+    }
+    .ommiggrid{
+        display: grid;
+        grid-template-areas: 
+        "billede billede"
+        "tekst kontakt"
+        "tekst .";
+    }
+    .pcgrid{
+        display: none;
+    }
+    .pcommig{
+        display: none;
+    }
+/* div og paragrafs fra grid container 1*/
+
+.item1{
+    grid-area: a;
+    }
+
+.item2{
+    grid-area: b;}
+.item3{
+    grid-area: c;
+}
+.item4{
+    grid-area: d;
+}
+.item5{
+    grid-area: e;
+}
+.item6{
+    grid-area: f;
+}
+.item7{
+    grid-area: g;
+    
+}
+
+/*items til bodygrid*/
+.item1a{
+    grid-area: a11;
+}
+.itema{
+    grid-area: a1;
+}
+.item1b{
+    grid-area: b11;
+}
+.itemb{
+    grid-area: b1;
+}
+.item1c{
+    grid-area: c11;
+}
+.itemc{
+    grid-area: c1;
+}
+.item1d{
+    grid-area: d11;
+}
+.itemd{
+    grid-area: d1;
+}
+.item1e{
+    grid-area: e11;
+}
+.iteme{
+    grid-area: e1;
+}
+.item1f{
+    grid-area: f11;
+}
+.itemf{
+    grid-area: f1;
+}
+
+/*items til om mig grid*/
+.item11{
+    grid-area: billede;
+}
+.item12{
+    grid-area: tekst;
+}
+.item13{
+    grid-area: kontakt;
+    background-color: #18392b;
+    margin-bottom: 8px;
+    border-radius: 20%;
+    
+}
+#kontaktmig{
+    height: 100%;
+    margin-top: 10%;
+    text-align: center;
+    color: #d0ded8;
+    line-height: 160%;
+}
+.item14{
+    grid-area: billede1;
+}
+.item15{
+    grid-area: tekst1;
+}
+#ommigtekst{
+    line-height: 300%;
+}
+.item16{
+    grid-area: kontakt1;
+}
+
+/* grid container for computervisning */
+@media screen and (min-width: 780px){
+    .mobil{
+        display: none;
+    }
+    .pcgrid {
+        
+        display: grid;
+        grid-template-areas:
+        " e e e e e e e e e"
+        " . . . f f f . . ."
+        " . . . . g . . . .";
+    }
+    
+    .bodygrid{
+        max-width: 90%;
+        margin: 0 auto;
+        display: grid;       
+        grid-template-areas:
+        "a1 a11"
+        "b1 b11"
+        "c1 c11"
+        "d1 d11"
+        "e1 e11"
+        "f1 f11";
+        gap: 0.5rem;
+        align-items: center;
+    }
+    .ommiggrid{
+        display: none;
+    }
+    .pcommig{
+        display: grid;
+        grid-template-areas: 
+        "billede1 billede1 tekst1"
+        "billede1 billede1 tekst1"
+        "kontakt1 kontakt1 kontakt1";
+        align-items: center;
+        margin-bottom: 9%;
+        
+        
+    } 
+   
+}
+
